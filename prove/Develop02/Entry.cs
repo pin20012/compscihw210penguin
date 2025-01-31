@@ -1,5 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography.X509Certificates;
+using System;
 
 public class Entry
 
@@ -10,7 +9,6 @@ public class Entry
     public string _prompt;
 
     public string _date;
-    // behavior
 
     public static string GetDate()
     { 

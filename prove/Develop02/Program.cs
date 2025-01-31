@@ -1,8 +1,7 @@
 using System;
-using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
 using System.IO;
 
+//The Program class is the main class of the whole program
 class Program
 {
     static void Main(string[] args)
@@ -13,13 +12,11 @@ class Program
         string randomPrompt = Promptgenerator.GetRandomPrompt();
         //Calls the GetDte from the Entry class to get the current date
         string currentDate = Entry.GetDate();
-        //
-        // Entry currentEntry = new Entry();
-
+        // creates a new instance list for a list called _entries
         List<Entry> _entries = new List<Entry>();
 
         int userNumber = -1;
-
+        // While user number is not equal to 5 then then the program will keep running
         while (userNumber != 5)
         {
             Console.WriteLine("Menu");
@@ -32,7 +29,7 @@ class Program
             string userAction = Console.ReadLine();
             userNumber = int.Parse(userAction);
 
-            // MENU OPTION 1
+            // 1. Write
             if (userNumber == 1)
             {
                 Console.Write($"{randomPrompt}");
@@ -49,6 +46,7 @@ class Program
                 _entries.Add(currentEntry);
 
             }
+            // 2. Display
             if (userNumber == 2)
             {
                 foreach (Entry entry in _entries)
@@ -56,6 +54,7 @@ class Program
                     entry.DisplayEntry();
                 }
             }
+            // 3. Load
             if (userNumber == 3)
             {
                 Console.Write($"What is the name of the file: ");
@@ -63,6 +62,7 @@ class Program
 
                 _entries = Load.LoadEntry(loadFileName);
             }
+            // 4. Save
             if (userNumber == 4)
             {
                 Console.WriteLine($"What is the file name? ");
