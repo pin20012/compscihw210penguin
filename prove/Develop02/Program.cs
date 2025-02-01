@@ -2,6 +2,7 @@ using System;
 using System.IO;
 
 //The Program class is the main class of the whole program
+// To exceed requirements I created another variable in the journal which is _quote. A user can now enter a quote into their journal if they would like.
 class Program
 {
     static void Main(string[] args)
@@ -35,12 +36,16 @@ class Program
                 Console.Write($"{randomPrompt}");
                 string response = Console.ReadLine();
 
-                Entry.WholeEntry(currentDate, randomPrompt, "");
+                Console.Write("What is your quote of the day: ");
+                string userQuote = Console.ReadLine();
+
+                Entry.WholeEntry(currentDate, randomPrompt, "", "");
 
                 Entry currentEntry = new Entry();
                 currentEntry._date = currentDate;
                 currentEntry._prompt = randomPrompt;
                 currentEntry._lastEntry = response;
+                currentEntry._quote = userQuote;
 
 
                 _entries.Add(currentEntry);

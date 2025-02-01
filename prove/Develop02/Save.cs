@@ -10,7 +10,7 @@ public class  Save
         {
             foreach (Entry entry in entries)
             {
-                outputFile.WriteLine($"{entry._date},{entry._prompt},{entry._lastEntry}");
+                outputFile.WriteLine($"{entry._date},{entry._prompt},{entry._lastEntry},{entry._quote}");
             }
         }
     }

@@ -17,6 +17,7 @@ public static List<Entry> LoadEntry(string fileName)
             currentEntry._date = parts[0];
             currentEntry._prompt = parts[1];
             currentEntry._lastEntry = parts[2];
+            currentEntry._quote = parts[3];
 
             entries.Add(currentEntry);
         }
