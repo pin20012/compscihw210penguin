@@ -3,7 +3,7 @@ public class Triangle : Shape
     private double _basetri;
     private double _height;
 
-    public Triangle(string color, double basetri, double height) : base (color)
+    public Triangle(string color,string shape, double basetri, double height) : base (color, shape)
     {
         _basetri = basetri;
         _height = height;

@@ -2,7 +2,7 @@ public class Square : Shape
 {
     private double _side;
 
-    public Square(string color, double side) : base (color)
+    public Square(string color, string shape, double side) : base (color, shape)
     {
         _side = side;
     }

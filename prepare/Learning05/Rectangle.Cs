@@ -3,7 +3,7 @@ public class Rectangle : Shape
     private double _width;
     private double _length;
 
-    public Rectangle(string color, double width, double length) : base (color)
+    public Rectangle(string color, string shape, double width, double length) : base (color, shape)
     {
         _width = width;
         _length = length;

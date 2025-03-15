@@ -2,7 +2,7 @@ public class Circle : Shape
 {
     private double _radius;
 
-    public Circle(string color, double radius) : base (color)
+    public Circle(string color, string shape, double radius) : base (color, shape)
     {
         _radius = radius;
     }
