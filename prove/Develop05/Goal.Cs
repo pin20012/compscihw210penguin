@@ -3,10 +3,10 @@ using System.IO;
 
 public class Goal
 {
-    private string _goal;
-    private int _score;
-    private string _description;
-    private bool _status;
+    protected string _goal;
+    protected int _score;
+    protected string _description;
+    protected bool _status;
 
     public Goal()
     {
@@ -19,7 +19,18 @@ public class Goal
         _status = status;
     }
 
-    public string CreateGoal()
+// Learned about the ToString() method from chatGPT to help display the goals correctly
+    public override string ToString()
+    {
+        return $"[] {_goal} ({_description})";
+    }
+
+    public virtual string SaveString()
+    {
+        return $"Simple Goal:,{_goal},{_description},{_score},{_status}";
+    }
+
+    public virtual string CreateGoal()
     {
         
         Console.Write($"What is the name of your goal? ");
@@ -33,6 +44,8 @@ public class Goal
 
         string assembledGoal = $" [] {_goal} ({_description}))";
 
-        return assembledGoal;
+        _status = false;
+
+        return assembledGoal.ToString();
     }
 }
