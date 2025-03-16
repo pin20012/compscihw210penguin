@@ -3,7 +3,6 @@ using System.IO;
 
 public class Eternal : Goal
 {
-    private string _notusedyet;
 
     public Eternal()
     {
