@@ -3,13 +3,12 @@ using System.IO;
 
 public class Eternal : Goal
 {
-
     public Eternal()
     {
 
     }
 
-    public Eternal(string goal, int score, string description, bool status) : base (goal, score, description, status)
+    public Eternal(string goal, string description, int score, bool status) : base (goal, description, score, status)
     {
         
     }
@@ -18,4 +17,10 @@ public class Eternal : Goal
     {
         return $"Eternal Goal:,{_goal},{_description},{_score}";
     }
+
+    public override int Completed()
+    {
+        return _score;
+    }
+
 }

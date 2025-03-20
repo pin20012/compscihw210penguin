@@ -3,8 +3,8 @@ using System.IO;
 
 public class Checklist : Goal
 {
-    private int _times;
     private int _bonus;
+    private int _times;
 
     private int _timesCompleted = 0;
 
@@ -13,7 +13,7 @@ public class Checklist : Goal
 
     }
 
-    public Checklist(string goal, int score, string description, bool status, int times, int bonus, int timesCompleted) : base (goal, score, description, status)
+    public Checklist(string goal, string description, int score, int bonus, int times, int timesCompleted) : base (goal, description, score, false)
     {
         _times = times;
         _bonus = bonus;
@@ -22,7 +22,7 @@ public class Checklist : Goal
 
     public override string ToString()
     {
-        return $"[] {_goal} ({_description})  -- Currently completed: {_timesCompleted}/{_times}";
+        return $"[{Check()}] {_goal} ({_description})  -- Currently completed: {_timesCompleted}/{_times}";
     }
 
     public override string SaveString()
@@ -47,8 +47,29 @@ public class Checklist : Goal
         Console.Write($"What is the bonus for accompishing it that many times? ");
         _bonus = int.Parse(Console.ReadLine());
 
-        string assembledGoal = ($" [] {_goal} ({_description})  -- Currently completed: 0/{_times}");
+        string assembledGoal = $" [] {_goal} ({_description})  -- Currently completed: 0/{_times}";
 
         return assembledGoal.ToString();
-    }   
+    }
+
+    public int TimesLeft()
+    {
+        _times -= 1;
+        return _times;
+    }
+
+    // this checks if a checklist goal has been all the way completed
+    public override int Completed()
+    {
+        if (_status) 
+            return 0;
+        
+        _timesCompleted += 1;
+
+        if (_timesCompleted != _times) 
+            return _score;
+
+        _status = true;
+        return _score + _bonus;
+    }
 }
