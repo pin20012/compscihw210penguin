@@ -6,14 +6,23 @@ public class Video
     private string _title;
 
     private string _author;
+
     private int _length;
 
-    List<Video> _comments = new List<Video>();
+    private int _count = 0;
 
-    // this method returns the number of comments
-    public int NumberOfComments()
+    public Video (string title, string author, int length)
     {
-        return 0;
+        _title = title;
+        _author = author;
+        _length = length;
+    }
+    
+    public void DisplayVideo()
+    {
+        Console.WriteLine($"Video: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Video Length: {_length} seconds");
     }
 
 }

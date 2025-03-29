@@ -4,13 +4,23 @@ using System.IO;
 public class Customer
 {
     private string _customerName;
-    
-    public Address
+    private Address _address;
+
+    public Customer(string customerName, Address address)
+    {
+        _customerName = customerName;
+        _address = address;
+    }
     
     // The customer should have a method that can return whether they live in the USA or not. (Hint this should call a method on the address to find this.)
-    public virtual bool IsInUSA()
+    public bool IsInUSAorNot()
     {
-        return true;
+        return _address.IsInUSAorNot();
+    }
+
+    public string GetCustomer()
+    {
+        return $"{_customerName}";
     }
 }
 

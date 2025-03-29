@@ -5,14 +5,26 @@ public class Product
 {
     private string _productName;
     private int _productID;
-    private int _pricerPerUnit;
-    private int _quantity;
-    private int _totalProductCost;
+    private double _pricerPerUnit;
+    private double _quantity;
 
-    public int TotalCost()
+    public Product(string productName, int productID, double pricePerUnit, double quantity)
     {
-        _totalProductCost = _pricerPerUnit * _quantity;
-        return _totalProductCost;
+        _productName = productName;
+        _productID = productID;
+        _pricerPerUnit = pricePerUnit;
+        _quantity = quantity;
+    }
+
+    public double Total()
+    {
+        
+        return _pricerPerUnit * _quantity;
+    }
+
+    public string ProductNameAndID()
+    {
+        return $"{_productName} (ID: {_productID})";
     }
 }
 

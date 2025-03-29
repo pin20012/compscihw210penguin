@@ -3,22 +3,37 @@ using System.IO;
 
 public class Address
 {
-    private string _streetaAddress;
+    private string _streetAddress;
     private string _city;
     private string _stateOrProvince;
     private string _country;
-    private string _address;
+
+    public Address(string streetAddress, string city, string stateOrProvince, string country)
+    {
+        _streetAddress = streetAddress;
+        _city = city;
+        _stateOrProvince = stateOrProvince;
+        _country = country;
+    }
 
     // This method checks if the address is in the USA or not
-    public virtual bool IsInUSA()
+    public virtual bool IsInUSAorNot()
     {
-        return true;
+        if (_country == "United States")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        ;
     }
     
     // This string will return the full address with newline characters where appropriate
-    public string Address()
+    public string FullAddress()
     {
-        return _address;
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
     }
 
 }
