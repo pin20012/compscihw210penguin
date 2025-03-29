@@ -3,6 +3,7 @@ using System.IO;
 
 public class Customer
 {
+    //attributes
     private string _customerName;
     private Address _address;
 
@@ -23,8 +24,6 @@ public class Customer
         return $"{_customerName}";
     }
 }
-
-
 
 // The customer contains a name and an address.
 // The name is a string, but the Address is a class.

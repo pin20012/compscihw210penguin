@@ -3,11 +3,15 @@ using System.IO;
 
 public class Product
 {
+    //Attributes
     private string _productName;
     private int _productID;
     private double _pricerPerUnit;
     private double _quantity;
 
+    //Methods
+
+    //Constructor
     public Product(string productName, int productID, double pricePerUnit, double quantity)
     {
         _productName = productName;

@@ -42,7 +42,7 @@ class Program
         Console.WriteLine($"===========================================");
         Console.WriteLine(o1.CreatePackingLabel());
         Console.WriteLine(o1.CreateShippingLabel());
-        Console.WriteLine(o1.CostAfterShipping());
+        Console.WriteLine(o1.OrderCostSummary());
         Console.WriteLine();
 
         Console.WriteLine($"===========================================");
@@ -50,7 +50,7 @@ class Program
         Console.WriteLine($"===========================================");
         Console.WriteLine(o2.CreatePackingLabel());
         Console.WriteLine(o2.CreateShippingLabel());
-        Console.WriteLine(o2.CostAfterShipping());
+        Console.WriteLine(o2.OrderCostSummary());
         Console.WriteLine();
 
         Console.WriteLine($"===========================================");
@@ -58,7 +58,7 @@ class Program
         Console.WriteLine($"===========================================");
         Console.WriteLine(o3.CreatePackingLabel());
         Console.WriteLine(o3.CreateShippingLabel());
-        Console.WriteLine(o3.CostAfterShipping());
+        Console.WriteLine(o3.OrderCostSummary());
         Console.WriteLine();
     }
 }

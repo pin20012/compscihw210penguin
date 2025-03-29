@@ -3,11 +3,15 @@ using System.IO;
 
 public class Address
 {
+    //Attributes
     private string _streetAddress;
     private string _city;
     private string _stateOrProvince;
     private string _country;
 
+    //Methods
+
+    //Constructor for the address
     public Address(string streetAddress, string city, string stateOrProvince, string country)
     {
         _streetAddress = streetAddress;
@@ -17,6 +21,8 @@ public class Address
     }
 
     // This method checks if the address is in the USA or not
+    // If the address is true then the method will return true
+    // If not, the method will return false
     public virtual bool IsInUSAorNot()
     {
         if (_country == "United States")
