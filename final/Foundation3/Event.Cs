@@ -3,28 +3,37 @@ using System.IO;
 
 public class Event
 {
-    private string _eventTitle;
-    private string _description;
-    private  DateTime _eventDate;
-    private TimeSpan _eventTime;
-    private string _address;
+    protected string _eventTitle;
+    protected string _description;
+    protected string _eventDate;
+    protected string _eventTime;
+    protected string _address;
+
+    public Event(string eventTitle, string description, string eventDate, string eventTime, string address)
+    {
+        _eventTitle = eventTitle;
+        _description = description;
+        _eventDate = eventDate;
+        _eventTime = eventTime;
+        _address = address;
+    }
 
     // Standard details - Lists the title, description, date, time, and address.
     public string StandardDetails()
     {
-
+        return $"{_eventTitle}\n{_description}\n{_eventDate}\n{_eventTime}\n{_address}";
     }
 
     // Full details - Lists all of the above, plus type of event and information specific to that event type. For lectures, this includes the speaker name and capacity. For receptions this includes an email for RSVP. For outdoor gatherings, this includes a statement of the weather.
-    public string FullDetails()
+    public virtual string FullDetails()
     {
-
+        return $"{_eventTitle}\n{_description}\n{_eventDate}\n{_eventTime}\n{_address}";
     }
 
     // Short description - Lists the type of event, title, and the date.
-    public string ShortDescription()
+    public virtual string ShortDescription()
     {
-        
+        return $"{_eventTitle}\n{_eventDate}";
     }
 
 }

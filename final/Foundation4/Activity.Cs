@@ -3,8 +3,14 @@ using System.IO;
 
 public class Activity
 {
-    private DateTime _date;
-    private int _length;
+    protected string _date;
+    protected double _length;
+
+    public Activity(string date, double length)
+    {
+        _date = date;
+        _length = length;
+    }
 
     // The distance
     // In either case the length of a lap in the lap pool is 50 meters.
@@ -13,7 +19,7 @@ public class Activity
     // Distance (miles) = swimming laps * 50 / 1000 * 0.62
     public virtual double Distance()
     {
-
+        return 0;
     }
 
     // The speed (miles per hour or kilometers per hour)
@@ -22,7 +28,7 @@ public class Activity
     // Speed = 60 / pace
     public virtual double Speed()
     {
-
+        return 0;
     }
     // The pace (minutes per mile or minutes per kilometer)
     // Math Hints:
@@ -30,7 +36,7 @@ public class Activity
     // Pace = 60 / speed
     public virtual double Pace()
     {
-
+        return 0;
     }
 
     // A summary in the form of:
@@ -41,7 +47,7 @@ public class Activity
     // Remember that the summary method can make use of the other methods to produce its result. This method should be available for all classes, so it should be defined in the base class (you can override it in the derived classes if needed, but it may not need to be...).
     public virtual string GetSummary()
     {
-
+        return $"{_date} Running ({_length} min) - Distance {Distance()} miles, Speed {Speed()} mph, Pace: {Pace()} min per mile";
     }
 }
 
