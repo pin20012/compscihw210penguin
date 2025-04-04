@@ -36,10 +36,16 @@ class Program
             Console.WriteLine();
             v.DisplayVideo();
 
+            int count = 0;
+
             foreach (Comment c in _commentList)
             {
                 c.DisplayCommment();
+
+                count +=1;
             }
+
+            Console.WriteLine($"Number of Comments: {count}");
         }
 
 
@@ -94,10 +100,16 @@ class Program
             Console.WriteLine();
             v.DisplayVideo();
 
+            int count = 0;
+
             foreach (Comment c in _commentList3)
             {
                 c.DisplayCommment();
+
+                count +=1;
             }
+
+            Console.WriteLine($"Number of Comments: {count}");
         }   
     }
 }

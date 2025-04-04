@@ -9,8 +9,6 @@ public class Video
 
     private int _length;
 
-    private int _count = 0;
-
     public Video (string title, string author, int length)
     {
         _title = title;
