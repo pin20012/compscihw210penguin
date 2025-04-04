@@ -4,7 +4,7 @@ using System.IO;
 public class Running : Activity
 {
     private double _distance;
-    public Running(string date, double length, double distance) : base(date, length)
+    public Running(string date, double length, double distance, string activityType) : base(date, length, activityType)
     {
         _distance = distance;
     }

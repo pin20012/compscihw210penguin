@@ -5,11 +5,13 @@ public class Activity
 {
     protected string _date;
     protected double _length;
+    protected string _activityType;
 
-    public Activity(string date, double length)
+    public Activity(string date, double length, string activityType)
     {
         _date = date;
         _length = length;
+        _activityType = activityType;
     }
 
     // The distance
@@ -48,6 +50,12 @@ public class Activity
     public virtual string GetSummary()
     {
         return $"{_date} Running ({_length} min) - Distance {Distance()} miles, Speed {Speed()} mph, Pace: {Pace()} min per mile";
+    }
+
+    public virtual string ActivityType()
+    {
+        _activityType = "Running";
+        return _activityType;
     }
 }
 

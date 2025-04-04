@@ -4,7 +4,7 @@ using System.IO;
 public class Cycling : Activity
 {
     private double _speed;
-    public Cycling(string date, double length, double speed) : base(date, length)
+    public Cycling(string date, double length, double speed, string activityType) : base(date, length, activityType)
     {
         _speed = speed;
     }
@@ -28,5 +28,11 @@ public class Cycling : Activity
     public override string GetSummary()
     {
         return $"{_date} Cycling ({_length} min) - Distance {Math.Round(Distance(), 2)} miles, Speed {Speed()} mph, Pace: {Math.Round(Pace(), 2)} min per mile";
+    }
+
+    public override string ActivityType()
+    {
+        _activityType = "Cycling";
+        return _activityType;
     }
 }
