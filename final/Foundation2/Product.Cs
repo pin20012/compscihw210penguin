@@ -21,7 +21,6 @@ public class Product
     // Methods
     public double Total()
     {
-        
         return _pricerPerUnit * _quantity;
     }
 
