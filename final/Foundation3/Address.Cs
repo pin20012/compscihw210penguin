@@ -10,8 +10,6 @@ public class Address
     private string _zipCode;
     private string _country; 
 
-    //Methods
-
     //Constructor for the address
     public Address(string streetAddress, string city, string state, string zipCode, string country)
     {
@@ -22,6 +20,7 @@ public class Address
         _country = country;
     }
 
+    // Methods
     public string GetAddress()
     {
         return $"{_streetAddress}\n{_city}, {_state} {_zipCode}\n{_country}";

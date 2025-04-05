@@ -7,11 +7,14 @@ public class Customer
     private string _customerName;
     private Address _address;
 
+    // Constructor
     public Customer(string customerName, Address address)
     {
         _customerName = customerName;
         _address = address;
     }
+
+    // Methods Found Below
     
     // The customer should have a method that can return whether they live in the USA or not. (Hint this should call a method on the address to find this.)
     public bool IsInUSAorNot()

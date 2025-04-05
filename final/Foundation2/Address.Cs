@@ -9,8 +9,6 @@ public class Address
     private string _stateOrProvince;
     private string _country;
 
-    //Methods
-
     //Constructor for the address
     public Address(string streetAddress, string city, string stateOrProvince, string country)
     {
@@ -19,6 +17,8 @@ public class Address
         _stateOrProvince = stateOrProvince;
         _country = country;
     }
+
+    // Methods found below
 
     // This method checks if the address is in the USA or not
     // If the address is true then the method will return true
@@ -43,7 +43,6 @@ public class Address
     }
 
 }
-
 
 // The address contains a string for the street address, the city, state/province, and country.
 // The address should have a method that can return whether it is in the USA or not.

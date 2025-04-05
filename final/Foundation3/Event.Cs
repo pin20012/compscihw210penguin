@@ -3,12 +3,14 @@ using System.IO;
 
 public class Event
 {
+    // Attributes
     protected string _eventTitle;
     protected string _description;
     protected string _eventDate;
     protected string _eventTime;
     protected string _address;
 
+    // Constructor
     public Event(string eventTitle, string description, string eventDate, string eventTime, string address)
     {
         _eventTitle = eventTitle;
@@ -17,6 +19,8 @@ public class Event
         _eventTime = eventTime;
         _address = address;
     }
+
+    // Methods found below
 
     // Standard details - Lists the title, description, date, time, and address.
     public string StandardDetails()
@@ -35,7 +39,6 @@ public class Event
     {
         return $"{_eventTitle}\n{_eventDate}";
     }
-
 }
 
 // They need you to write a program to track each of these events and produce the marketing material to distribute on social media.

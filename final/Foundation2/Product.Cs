@@ -9,8 +9,6 @@ public class Product
     private double _pricerPerUnit;
     private double _quantity;
 
-    //Methods
-
     //Constructor
     public Product(string productName, int productID, double pricePerUnit, double quantity)
     {
@@ -20,6 +18,7 @@ public class Product
         _quantity = quantity;
     }
 
+    // Methods
     public double Total()
     {
         

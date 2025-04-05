@@ -3,12 +3,16 @@ using System.IO;
 
 public class Swimming : Activity
 {
+    // Attributes
     private double _numberOfLaps;
+
+    // Constructor
     public Swimming(string date, double length, double numberOfLaps, string activityType) : base( date, length, activityType)
     {
         _numberOfLaps = numberOfLaps;
     }
 
+    // Methods
     public override double Distance()
     {
         return (_numberOfLaps * 50) / (1000 * .62);

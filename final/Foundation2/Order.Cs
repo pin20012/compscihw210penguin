@@ -8,9 +8,8 @@ public class Order
     private Customer _customer;
     private Address _address;
 
+    // products list
     List<Product> _products = new List<Product>();
-   
-    //Methods
 
     //Constructor
    public Order(Customer customer, Address address)
@@ -18,6 +17,8 @@ public class Order
         _customer = customer;
         _address = address;
    }
+
+   // Methods
    public void AddProduct(Product product)
    {
         _products.Add(product);

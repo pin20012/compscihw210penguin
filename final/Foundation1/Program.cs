@@ -49,7 +49,6 @@ class Program
         }
 
 
-
         // Video 2
         Video video2 = new Video("How to make the best brownies", "Mariah Freeman", 7);
         _videoList2.Add(video2);
@@ -79,7 +78,6 @@ class Program
         
             Console.WriteLine($"Number of Comments: {count}");
         }
-
 
 
         // Video 3

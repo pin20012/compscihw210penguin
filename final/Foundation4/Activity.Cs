@@ -3,16 +3,20 @@ using System.IO;
 
 public class Activity
 {
+    // Attributes
     protected string _date;
     protected double _length;
     protected string _activityType;
 
+    // Constructor
     public Activity(string date, double length, string activityType)
     {
         _date = date;
         _length = length;
         _activityType = activityType;
     }
+
+    // Methods Found Below
 
     // The distance
     // In either case the length of a lap in the lap pool is 50 meters.

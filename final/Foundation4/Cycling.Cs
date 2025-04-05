@@ -3,12 +3,16 @@ using System.IO;
 
 public class Cycling : Activity
 {
+    // Atttributes
     private double _speed;
+
+    //Constructor
     public Cycling(string date, double length, double speed, string activityType) : base(date, length, activityType)
     {
         _speed = speed;
     }
 
+    //Methods
     public override double Speed()
     {
         return _speed;
@@ -19,7 +23,6 @@ public class Cycling : Activity
         return _speed * (_length / 60);
     }
 
-    //overide the pace for this class then work on the swimming class
     public override double Pace()
     {
         return 60 / _speed;
